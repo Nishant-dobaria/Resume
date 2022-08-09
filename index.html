@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant`s Resume</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="Logo">Nishant Dobariya</a>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src='images/stars.png' id="stars">
+        <img src='images/moon.png' id="moon">
+        <img src='images/mountains_behind.png' id="mountains_behind">
+        <h2 id="text">Welcome</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src='images/mountains_front.png' id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Nishant Dobariya</h2>
+        <p>I want to use my skills and abilities in an environment where I can make a difference and also contribute to society and open source.</p>
+        <br>
+        <h4>Education: </h4>
+        <h6>PP Savani University</h6>
+        <p>> Bechlor of Technology, Computer Engineering, graduation year:2023</p>
+        <p>> CGPA: 7.56/10.0</p>
+        <h6>Gujarat Technical University</h6>
+        <p>> Diploma Engineering, Mechanical Engineering, 2017-2020</p>
+        <p>> CGPA: 7.53/10.0</p>
+        <br>
+        <h4>Projects: </h4>
+        <h6>Booking Management for Real-Estate Projects</h6>
+        <p>> This Web application is for the builders that used for booking management of commercial or residential
+        project(Buildings). this app performs CRUD Operation on Data-base based on requirement of the user manages all data on Database.</p>
+        <p>> Technology's : Django Framework, MySQL, Python, Bootstrap, HTML, CSS.</p>
+        <h6>Covid-19 Tracker</h6>
+        <p>> This Web application is for tracking Covid-19 Cases worldwide and individual country plus shows cases in map. This app fetches Covid-19 Data from the Worldometers database and displays according to user input. </p>
+        <p>> Technology`s : React Library, Disease.sh API for Live Cases, JavaScript(JSX), CSS.</p>
+    </div>
+
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 0.70 + 'px';
+            mountains_behind.style.top = value * 0.30 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
